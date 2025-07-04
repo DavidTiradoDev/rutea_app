@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+
 import 'package:google_fonts/google_fonts.dart';
+import 'package:unicons/unicons.dart';
 import 'package:provider/provider.dart';
+
 import 'package:rutea_app/core/theme/app_colors.dart';
 import 'package:rutea_app/core/theme/app_sizes.dart';
 import 'package:rutea_app/modules/home/domain/home_provider.dart';
-import 'package:unicons/unicons.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -21,6 +23,22 @@ class HomeScreen extends StatelessWidget {
             fontSize: AppSizes.fontM,
           ),
         ),
+        actions: [
+          ValueListenableBuilder(
+            valueListenable: homeProvider.currentIndex,
+            builder: (context, currentIndex, snapshot) {
+              return IconButton(
+                onPressed:
+                    currentIndex == 1
+                        ? () {
+                          debugPrint('Añadir auto');
+                        }
+                        : null,
+                icon: currentIndex == 1 ? Icon(UniconsLine.plus) : Container(),
+              );
+            },
+          ),
+        ],
       ),
       body: ValueListenableBuilder(
         valueListenable: homeProvider.currentIndex,
