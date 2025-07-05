@@ -23,7 +23,7 @@ class VehiclesPage extends StatelessWidget {
           const SizedBox(height: 10),
           Expanded(
             child: ListView.builder(
-              itemCount: 10,
+              itemCount: 1,
               itemBuilder:
                   (context, index) => VehicleCard(
                     maintenanceDate: '21/08/2002',

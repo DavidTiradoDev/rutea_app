@@ -16,6 +16,7 @@ class HomeScreen extends StatelessWidget {
     final homeProvider = Provider.of<HomeProvider>(context);
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text(
           'Rutea',
           style: GoogleFonts.montserrat(
