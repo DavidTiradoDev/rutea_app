@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rutea_app/core/theme/app_colors.dart';
 import 'package:rutea_app/core/theme/app_sizes.dart';
@@ -59,28 +60,7 @@ class ProfilePage extends StatelessWidget {
                 GestureDetector(
                   onTap: () {
                     debugPrint('Funcionando');
-                  },
-                  child: Row(
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(
-                          color: AppColors.lightGrey,
-                          borderRadius: BorderRadius.circular(AppSizes.radiusS),
-                        ),
-                        child: Icon(UniconsLine.car),
-                      ),
-                      SizedBox(width: 10),
-                      Text(
-                        'Mis Vehículos',
-                        style: GoogleFonts.montserrat(fontSize: AppSizes.fontL),
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(height: 10),
-                GestureDetector(
-                  onTap: () {
-                    debugPrint('Funcionando');
+                    context.go('/sync');
                   },
                   child: Row(
                     children: [

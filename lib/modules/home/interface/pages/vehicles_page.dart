@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rutea_app/core/theme/app_sizes.dart';
 import 'package:rutea_app/core/widgets/widgets.dart';
@@ -29,6 +30,9 @@ class VehiclesPage extends StatelessWidget {
                     maintenanceDate: '21/08/2002',
                     carType: 'Honda CRV',
                     numberPlate: 'ABC 123',
+                    onTap: () {
+                      context.push('/vehicles');
+                    },
                   ),
             ),
           ),

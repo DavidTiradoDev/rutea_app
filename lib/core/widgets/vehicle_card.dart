@@ -9,19 +9,19 @@ class VehicleCard extends StatelessWidget {
     required this.maintenanceDate,
     required this.carType,
     required this.numberPlate,
+    required this.onTap,
   });
 
   final String maintenanceDate;
   final String carType;
   final String numberPlate;
+  final GestureTapCallback onTap;
 
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return GestureDetector(
-      onTap: () {
-        debugPrint('Card');
-      },
+      onTap: onTap,
       child: Container(
         margin: const EdgeInsets.only(bottom: 10),
         padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 import 'package:unicons/unicons.dart';
@@ -33,6 +34,7 @@ class HomeScreen extends StatelessWidget {
                     currentIndex == 1
                         ? () {
                           debugPrint('Añadir auto');
+                          context.push('/add_vehicle');
                         }
                         : null,
                 icon: currentIndex == 1 ? Icon(UniconsLine.plus) : Container(),
