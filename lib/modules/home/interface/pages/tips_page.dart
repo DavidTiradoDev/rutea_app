@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rutea_app/core/theme/app_colors.dart';
 import 'package:rutea_app/core/theme/app_sizes.dart';
@@ -34,6 +35,7 @@ class TipsPage extends StatelessWidget {
                 icon: Icon(UniconsLine.car),
                 onTap: () {
                   debugPrint('Automovil Tip Screen');
+                  context.push('/car_tips');
                 },
               ),
               TipsButton(
@@ -41,6 +43,7 @@ class TipsPage extends StatelessWidget {
                 icon: Icon(Icons.motorcycle_rounded),
                 onTap: () {
                   debugPrint('Motocicleta Tip Screen');
+                  context.push('/bike_tips');
                 },
               ),
             ],

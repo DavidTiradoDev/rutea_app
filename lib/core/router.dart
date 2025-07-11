@@ -7,6 +7,8 @@ import 'package:rutea_app/modules/home/home_injection.dart';
 import 'package:rutea_app/modules/vehicles/vehicles_injection.dart';
 import 'package:rutea_app/modules/add_vehicle/add_vehicle_injection.dart';
 import 'package:rutea_app/modules/add_maintenance/add_maintenance_injection.dart';
+import 'package:rutea_app/modules/bike_tips/bike_tips_injection.dart';
+import 'package:rutea_app/modules/car_tips/car_tips_injection.dart';
 
 final router = GoRouter(
   initialLocation: '/sync',
@@ -38,6 +40,14 @@ final router = GoRouter(
     GoRoute(
       path: '/add_vehicle',
       builder: (context, state) => AddVehicleInjection.injection(),
+    ),
+    GoRoute(
+      path: '/car_tips',
+      builder: (context, state) => CarTipsInjection.injection(),
+    ),
+    GoRoute(
+      path: '/bike_tips',
+      builder: (context, state) => BikeTipsInjection.injection(),
     ),
   ],
 );
