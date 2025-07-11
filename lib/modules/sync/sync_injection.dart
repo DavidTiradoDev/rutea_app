@@ -8,7 +8,7 @@ class SyncInjection {
 
   static Widget injection() {
     return ListenableProvider(
-      create: (context) => SyncProvider()..nextPage(context),
+      create: (context) => SyncProvider(),
       child: SyncScreen(),
     );
   }

@@ -38,22 +38,11 @@ class LoginScreen extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-                Container(
-                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(AppSizes.radiusS),
-                    border: Border.all(color: Colors.grey),
-                  ),
-                  child: TextFormField(
-                    decoration: InputDecoration(
-                      border: InputBorder.none,
-                      hintText: 'Ingresa tu email',
-                      hintStyle: GoogleFonts.montserrat(),
-                    ),
-                    style: GoogleFonts.montserrat(color: AppColors.text),
-                    keyboardType: TextInputType.emailAddress,
-                    cursorColor: AppColors.text,
-                  ),
+                TextFormFieldInput(
+                  keyboardType: TextInputType.emailAddress,
+                  hintText: 'Ingresa tu email',
+                  controller: TextEditingController(),
+                  inputFormatters: [],
                 ),
                 SizedBox(height: 10),
                 Text(
@@ -64,23 +53,11 @@ class LoginScreen extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-
-                Container(
-                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(AppSizes.radiusS),
-                    border: Border.all(color: Colors.grey),
-                  ),
-                  child: TextFormField(
-                    decoration: InputDecoration(
-                      border: InputBorder.none,
-                      hintText: 'Ingresa tu contraseña',
-                      hintStyle: GoogleFonts.montserrat(),
-                    ),
-                    style: GoogleFonts.montserrat(color: AppColors.text),
-                    keyboardType: TextInputType.emailAddress,
-                    cursorColor: AppColors.text,
-                  ),
+                TextFormFieldInput(
+                  hintText: 'Ingresa tu contraseña',
+                  controller: TextEditingController(),
+                  isPassword: true,
+                  inputFormatters: [],
                 ),
                 SizedBox(height: 10),
                 Center(

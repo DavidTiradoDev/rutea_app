@@ -44,11 +44,11 @@ class RegisterScreen extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-                _textFormFieldInput(
+                TextFormFieldInput(
                   hintText: 'Ingresa tus nombres',
                   controller: TextEditingController(),
                   keyboardType: TextInputType.name,
-                  obscureText: false,
+                  inputFormatters: [],
                 ),
                 Text(
                   'Apellidos',
@@ -58,11 +58,11 @@ class RegisterScreen extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-                _textFormFieldInput(
+                TextFormFieldInput(
                   hintText: 'Ingresa tus apellidos',
                   controller: TextEditingController(),
                   keyboardType: TextInputType.name,
-                  obscureText: false,
+                  inputFormatters: [],
                 ),
                 Text(
                   'Correo',
@@ -72,11 +72,11 @@ class RegisterScreen extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-                _textFormFieldInput(
+                TextFormFieldInput(
                   hintText: 'Ingresa tu correo',
                   controller: TextEditingController(),
                   keyboardType: TextInputType.emailAddress,
-                  obscureText: false,
+                  inputFormatters: [],
                 ),
                 Text(
                   'Contraseña',
@@ -86,11 +86,12 @@ class RegisterScreen extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-                _textFormFieldInput(
+                TextFormFieldInput(
                   hintText: 'Ingresa tu contraseña',
                   controller: TextEditingController(),
                   keyboardType: TextInputType.name,
-                  obscureText: true,
+                  isPassword: true,
+                  inputFormatters: [],
                 ),
                 Text(
                   'Confirmar contraseña',
@@ -100,11 +101,12 @@ class RegisterScreen extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-                _textFormFieldInput(
+                TextFormFieldInput(
                   hintText: 'Ingresa nuevamente tu contraseña',
                   controller: TextEditingController(),
                   keyboardType: TextInputType.name,
-                  obscureText: true,
+                  isPassword: true,
+                  inputFormatters: [],
                 ),
                 SizedBox(height: 10),
                 AppButton(
@@ -136,34 +138,6 @@ class RegisterScreen extends StatelessWidget {
             ),
           ),
         ),
-      ),
-    );
-  }
-
-  Container _textFormFieldInput({
-    required String hintText,
-    required TextEditingController controller,
-    TextInputType? keyboardType,
-    required bool obscureText,
-  }) {
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(AppSizes.radiusS),
-        border: Border.all(color: AppColors.lightGrey),
-        color: AppColors.lightGrey,
-      ),
-      child: TextFormField(
-        controller: controller,
-        decoration: InputDecoration(
-          border: InputBorder.none,
-          hintText: hintText,
-          hintStyle: GoogleFonts.montserrat(),
-        ),
-        style: GoogleFonts.montserrat(color: AppColors.text),
-        keyboardType: keyboardType,
-        cursorColor: AppColors.text,
-        obscureText: obscureText,
       ),
     );
   }
